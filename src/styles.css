@@ -1,0 +1,333 @@
+/* Importa la fuente Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+header {
+    position: relative;
+    background: url('/assets/img/header/header-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* Logo */
+.header-logo {
+    max-width: 420px;
+    width: 80%;
+}
+
+/* Título con gradiente */
+.header-title {
+    font-size: 8rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(to bottom, #fff 35%, #4e6773);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    position: relative;
+    line-height: 1;
+}
+
+/* Imagen de las nubes */
+.header-clouds {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: -50px;
+    z-index: 1;
+}
+
+/* Subtítulo */
+.header-subtitle {
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    z-index: 2;
+}
+
+/* Animación de las nubes */
+.moving-clouds {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background: url('/assets/img/header/clouds.png') repeat;
+    animation: cloudLoop 240s linear infinite;
+    z-index: 0;
+}
+
+/* Keyframes para las nubes animadas */
+@keyframes cloudLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Contenedor de la sección */
+.scroll-indicator-section {
+    position: relative;
+    padding: 60px 20px;
+    background: #2c003e; /* Fondo opcional */
+    color: #fff;
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+    position: relative;
+    margin-top: 20px;
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(10px); /* Rebote hacia abajo */
+    }
+}
+
+/* Imagen de scroll */
+.scroll-indicator img {
+    width: 3%; /* Ajusta el tamaño según el diseño */
+    opacity: 0.8; /* Añade transparencia */
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator img:hover {
+    opacity: 1; /* Efecto al pasar el mouse */
+}
+
+/* Fondo general */
+.services-section {
+    background: linear-gradient(45deg, #5c1cb2, #fd15ad);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo Neumórfico para las tarjetas */
+.neumorphic-card {
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.neumorphic-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Cambio de sombra */
+}
+
+/* Iconos */
+.icon-custom {
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+}
+
+.icon-custom-innovation {
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+}
+
+.icon-custom-consultory {
+    width: 21%;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-link p {
+    font-size: 1rem;
+    font-weight: 100;
+    color: #ccc; /* Texto gris para no seleccionadas */
+}
+
+.nav-link h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc; /* Texto gris para no seleccionadas */
+}
+.nav-link.active h4 {
+    color: #5c1cb2; /* Texto morado para seleccionadas */
+}
+
+.nav-link.active p {
+    color: #333333; /* Texto morado para seleccionadas */
+}
+
+/* Imagen con efecto gris */
+.icon-custom-innovation2 {
+    width: 25%;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.nav-link.active .icon-custom-innovation2 {
+    filter: none; /* Elimina el filtro de gris para la tarjeta activa */
+}
+
+
+/* Títulos de las tarjetas */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+/* Texto descriptivo */
+.card-text {
+    color: #333333;
+    font-size: 1rem;
+}
+
+.img-innovation {
+    width: 86%;
+}
+
+/* Estilo neumórfico */
+.icon-container {
+    width: 80px; /* Tamaño más pequeño */
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover (animación de brinco) */
+.icon-container:hover {
+    transform: translateY(-5px); /* Pequeño desplazamiento */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Ajuste para los íconos */
+.technology-icon {
+    width: 60%; /* Tamaño proporcional dentro del contenedor */
+    transition: transform 0.3s ease; /* Suaviza el efecto */
+}
+
+/* Efecto hover en los íconos */
+.technology-icon:hover {
+    transform: scale(1.1); /* Ligeramente más grande */
+}
+
+.features-section {
+    font-family: 'Lato', sans-serif;
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.list-group-item.active .text-muted {
+    color: #e0e0e0;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+.icon-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icon-custom2 {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.icon-custom {
+    max-width: 100%;
+    max-height: 100%;
+    width: 20%;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+}
+
+.image-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinea las imágenes más a la derecha */
+    align-items: center;
+    position: relative;
+    right: -200px; /* Ajusta la posición para moverla más a la derecha */
+}
+
+.custom-image {
+    max-height: 500px; /* Ajusta la altura máxima */
+    object-fit: cover;
+    width: auto;
+}
+
+.tab-pane img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-clouds {
+        max-width: 400px;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+    .image-wrapper {
+        right: 0; /* Ajusta la posición a la izquierda en pantallas pequeñas */
+        margin-top: 3%; /* Añade un margen superior */
+    }
+    .scroll-indicator {
+        width: 900px;
+    }
+}

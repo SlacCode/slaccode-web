@@ -1,0 +1,29 @@
+<div class="cookie-modal" *ngIf="isVisible">
+    <div class="cookie-content">
+        <h4>Usamos Cookies</h4>
+        <p>
+            Nosotros y terceros utilizamos cookies y otras tecnologías de tracking para mejorar su experiencia de navegación,
+            mostrarle contenido personalizado y anuncios dirigidos, analizar nuestras actividades de tracking y utilizar
+            tecnología de reproducción de sesiones. Más información está disponible en nuestra
+            <a href="/politica-de-cookies" target="_blank">política de cookies</a>.
+        </p>
+
+        <div class="cookie-options">
+            <label>
+                <input type="checkbox" [(ngModel)]="preferences.marketing" /> Marketing
+            </label>
+            <label>
+                <input type="checkbox" [(ngModel)]="preferences.functional" /> Funcional
+            </label>
+            <label>
+                <input type="checkbox" disabled checked /> Esencial
+            </label>
+        </div>
+
+        <div class="cookie-actions">
+            <button class="btn btn-success" (click)="acceptAll()">Aceptar todo</button>
+            <button class="btn btn-danger" (click)="rejectAll()">Rechazar</button>
+            <button class="btn btn-secondary" (click)="savePreferences()">Configurar tus cookies</button>
+        </div>
+    </div>
+</div>
